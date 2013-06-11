@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Jobline</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+  <body bgcolor="#efede7" marginheight="0" topmargin="0" marginwidth="0" leftmargin="0" style="text-align:left;">
+    <table cellspacing="0" border="0" height="100%" background="https://www.jobline.com.sg/assets/wave_bg.png" style="background-image:url('https://www.jobline.com.sg/assets/wave_bg.png');background-color:#efede7;background-repeat:repeat-y no-repeat;" cellpadding="0" width="100%">
+      <tr>
+        <td>
+          <div style="width:100%;">
+            <center>
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding-top:10px;padding-bottom:30px;text-align:left;">
+                    <center>
+                      <table width="580" cellpadding="0" cellspacing="0" border="0">
+                        <tr><td style="font-family:Verdana,sans-serif;font-size:10px;color:#666666;text-align:left;" valign="middle"></td></tr>
+                        <tr>
+                          <td background="https://www.jobline.com.sg/assets/ts_bg.gif" style="background-image:url('https://www.jobline.com.sg/assets/ts_bg.gif');background-color:#f6f6f6;background-repeat:repeat-y no-repeat;padding:20px;color:#000000;border:2px solid #cecece;" colspan="2">
+                            <h1 style="font-family:Helvetica,sans-serif;color:#393f46;font-size:20px;font-weight:bold;padding-bottom:20px;margin:0;">
+                              <%= @title %>
+                            </h1>
+                            <div style="font-family:Helvetica,sans-serif;font-size:15px;line-height:120%;color:#444444;background:#fff;padding:10px;border:1px solid #e5e5e5;">
+                              <%= yield %>
+                              Login to <a href="https://m.jobline.com.sg">m.jobline.com.sg</a> with your Smartphone today!
+                            </div>
+                            <p style="-webkit-text-size-adjust:none;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:150%;margin-top:30px;margin-bottom:0;color:#666666;">
+                              Regards,<br />
+                              <%= @sender || "Jobline Team" %><br />
+                              <strong style="font-weight:bold">Tel:</strong>
+                                <% if @sender =~ /^Seow Fen|Rachel Ng|John Bryan|Melvin Lim$/ %>
+                                  6-238-1989
+                                <% else %>
+                                  6-339-7198
+                                <% end %>
+                              <strong style="font-weight:bold;margin-left:5px">Fax:</strong> 6-338-8584<br />
+                              <strong style="font-weight:bold">Email:</strong> <%= @sender_email || "info@jobline.com.sg" %> <strong style="font-weight:bold;margin-left:5px">Website:</strong> <a href="http://www.jobline.com.sg" style="color:#666666">www.jobline.com.sg</a><br />
+                            </p>
+                            <p style="-webkit-text-size-adjust:none;font-family:Helvetica,sans-serif;font-size:11px;line-height:120%;margin-top:10px;margin-bottom:0;color:#888888;">
+                              Disclaimer: This message is intended only for the use of the individual addressee or organisation to whom it is addressed and may contain information that is privileged and confidential. If you are not the intended recipient, please notify us immediately by replying to this message and then delete it from your system. You should not copy or use it for any purpose, nor disclose its contents to any other person.
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- Footer -->
+                    </center>
+                  </td>
+                </tr>
+              </table>
+            </center>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
